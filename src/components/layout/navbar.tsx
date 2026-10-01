@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { useReadingState } from './reading-context'
-import { ArchiveTitle } from '@/components/brand/archive-title'
 import { MobileNav } from './mobile-nav'
 import { usePathname } from 'next/navigation'
 import { useSession, signOut } from 'next-auth/react'
@@ -51,7 +50,7 @@ export function Navbar({ settings = {} }: { settings?: Record<string, unknown> }
             <span className="schale-mark" aria-hidden="true">
               <Circle strokeWidth={2} />
             </span>
-            <ArchiveTitle title={title} compact />
+            {/* 左上角不再显示站点标题文字 */}
           </Link>
           <nav className="schale-nav-links" aria-label="主导航">
             {links.map((link) => (

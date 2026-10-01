@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - "v*"
+    branches:
+      - czy
   workflow_dispatch:
 
 jobs:
@@ -14,7 +16,8 @@ jobs:
       contents: read
       packages: write
     env:
-      IMAGE: ghcr.io/xywml/papergrid
+      # 改成你自己的名字空间（GHCR 要求全小写）
+      IMAGE: ghcr.io/chensir-sudo/chensir_papergrid
 
     steps:
       - name: 检出代码
